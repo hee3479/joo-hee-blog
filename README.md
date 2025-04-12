@@ -12,25 +12,20 @@
     - 데이터가 정렬되어 있다면 이진 검색도 사용 가능
     - 순차 검색에 비해 월등히 효율적이라 데이터가 몇 천만 개 이상이어도 빠르게 찾아낼 수 있음
 
-      - 이진탐색 코드
-  
+### 이진탐색 코드
+
     def binary_search(list, item)  ### 시작 (처음에는 배열 전체를 탐색한다)
-### low와 high는 전체 리스트 중에서 어떤 부분을 탐색해야하는지 알려줍니다.
-      low = 0
-      high = len(list)-1
-      
-### 만약 탐색 범위를 하나로 줄이지 못했으면 계속 실행합니다.
-      while low <=high 
-      
-### 가운데 숫자를 확인 합니다.
-        mid = (low + high) / 2
-        guess = list[mid]
-        if guess == item ----> #아이템을 찾았습니다.
-            return mid
-        if guess > item ----> #추측한 숫자가 너무 큽니다.
-            high = mid -1
-        else: ----> #추측한 숫자가 너무 작습니다.
-            low = mid + 1
+    low = 0   ### low와 high는 전체 리스트 중에서 어떤 부분을 탐색해야하는지 알려줍니다.
+    high = len(list)-1
+    while low <=high ### 만약 탐색 범위를 하나로 줄이지 못했으면 계속 실행합니다.
+    mid = (low + high) / 2 ### 가운데 숫자를 확인 합니다.
+    guess = list[mid]
+    if guess == item ----> #아이템을 찾았습니다.
+        return mid
+    if guess > item ----> #추측한 숫자가 너무 큽니다.
+        high = mid -1
+    else: ----> #추측한 숫자가 너무 작습니다.
+        low = mid + 1
     return none ----> #아이템이 리스트에 없습니다.
 
     my_list = [1,3,5,7,9] ----> #확인해보자
