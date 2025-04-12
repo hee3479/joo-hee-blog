@@ -32,6 +32,11 @@
 
     print binary_search(my_list, 3) # => 1 #잊지마세요. 리스트 번호는 0부터 시작합니다. 두 번째 상자의 번호가 1입니다
     print binary_search(my_list, -1) # => none #파이썬에서 none는 아무것도 아니라는 뜻입니다. 지정한 아이템이 없다는 것을 알려줍니다.
+
+### 위 코드에서 틀린 것
+    1. :이 없다. def binary_search(list, item):,  while low <=high:, if guess == item:, if guess > item:
+    2. mid = (low + high) / 2 이부분은 int가 들어가거나 // 표시로 몫만 사용해야한다.
+    3. print도 함수다. 다음과 같이 수정해야한다. print (binary_search(my_list, 3)) print (binary_search(my_list, -1))
     
 ### 과제 : 랜덤하게 0과 100000 사이의 정수를 1000개 생성한후 0과 100000 사이의 숫자를 랜덤하게 뽑아서 찾는 이진탐색 코드를 작성하시오. 또한 몇 번 반복해서 탐색에 성공하였는지 실패하였는지도 출력하시오
 
