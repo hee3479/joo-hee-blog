@@ -40,6 +40,36 @@
     
 ### 과제 코드_1
 
+# 랜덤으로 비밀 숫자 생성
+    secret_number = random.randint(0, 10000)
+    low = 0
+    high = 10000
+    attempts = 0
+    success_count = 0
+    fail_count = 0
+
+    print("컴퓨터가 0부터 10000 사이의 숫자를 맞춥니다!")
+
+# 버튼을 누를 때마다 한 번씩 추측하도록 반복
+    
+    while low <= high:
+    input("엔터를 눌러 컴퓨터가 추측하게 하세요...")
+    attempts += 1
+    guess = (low + high) // 2
+    print(f"컴퓨터의 추측: {guess}")
+
+    if guess == secret_number:
+        success_count += 1
+        print(f"정답입니다! 컴퓨터가 {attempts}번 만에 {secret_number}을(를) 찾았습니다.")
+        print(f"성공: {success_count}번, 실패: {fail_count}번")
+        break
+    elif guess < secret_number:
+        fail_count += 1
+        low = guess + 1
+    else:
+        fail_count += 1
+        high = guess - 1
+
     
     
     
