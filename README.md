@@ -86,13 +86,14 @@
 
 ## 선택정렬 최솟값을 찾는 코드
 
-    def findminix(ary) :
+    def findminidx(ary):
         minidx = 0
-        for i in range(1,len(ary)) :
-            if (ary[minidx] > ary[i] :
+        for i in range(1, len(ary)):
+            if (ary[minidx] > ary[i]):
+                minidx = i
         return minidx
-        
-    testary = [55,88,77,33]
-    minpos = findminidx(testary)
-    print('최솟값 -->', testary([minpos])
+
+testary = [55, 88, 77, 33]
+minpos = findminidx(testary)
+print('최솟값 -->', testary[minpos])
     
