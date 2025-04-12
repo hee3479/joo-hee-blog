@@ -14,8 +14,7 @@
 
       - 이진탐색 코드
   
-### 시작 (처음에는 배열 전체를 탐색한다)
-    def binary_search(list, item)
+    def binary_search(list, item)  ### 시작 (처음에는 배열 전체를 탐색한다)
 ### low와 high는 전체 리스트 중에서 어떤 부분을 탐색해야하는지 알려줍니다.
       low = 0
       high = len(list)-1
