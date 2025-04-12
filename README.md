@@ -38,6 +38,8 @@
     print binary_search(my_list, 3) # => 1 #잊지마세요. 리스트 번호는 0부터 시작합니다. 두 번째 상자의 번호가 1입니다
     print binary_search(my_list, -1) # => none #파이썬에서 none는 아무것도 아니라는 뜻입니다. 지정한 아이템이 없다는 것을 알려줍니다.
     
+### 과제 코드_1
+
     
     
     
