@@ -93,7 +93,6 @@
                 minidx = i
         return minidx
 
-testary = [55, 88, 77, 33]
-minpos = findminidx(testary)
-print('최솟값 -->', testary[minpos])
-    
+    testary = [55, 88, 77, 33]
+    minpos = findminidx(testary)
+    print('최솟값 -->', testary[minpos]) #실행결과 : 최솟값 --> 33
