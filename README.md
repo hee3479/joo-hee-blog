@@ -78,4 +78,21 @@
     - 데이터 검색에는 상당히 효율적이지만 트리의 삽입, 삭제 등에는 부담
 
  ## 선택정렬
- 
+
+ - 선택정렬
+ - 삽입정렬
+ - 버블정렬
+ - 퀵정렬
+
+## 선택정렬 최솟값을 찾는 코드
+
+    def findminix(ary) :
+        minidx = 0
+        for i in range(1,len(ary)) :
+            if (ary[minidx] > ary[i] :
+        return minidx
+        
+    testary = [55,88,77,33]
+    minpos = findminidx(testary)
+    print('최솟값 -->', testary([minpos])
+    
