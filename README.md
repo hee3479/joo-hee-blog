@@ -25,8 +25,22 @@
 ### 가운데 숫자를 확인 합니다.
         mid = (low + high) / 2
         guess = list[mid]
-        
-###        
+        if guess == item ----> #아이템을 찾았습니다.
+            return mid
+        if guess > item ----> #추측한 숫자가 너무 큽니다.
+            high = mid -1
+        else: ----> #추측한 숫자가 너무 작습니다.
+            low = mid + 1
+    return none ----> #아이템이 리스트에 없습니다.
+
+    my_list = [1,3,5,7,9] ----> #확인해보자
+
+    print binary_search(my_list, 3) # => 1 #잊지마세요. 리스트 번호는 0부터 시작합니다. 두 번째 상자의 번호가 1입니다
+    print binary_search(my_list, -1) # => none #파이썬에서 none는 아무것도 아니라는 뜻입니다. 지정한 아이템이 없다는 것을 알려줍니다.
+    
+    
+    
+    
        
 
 - 트리탐색 (데이터가 변동이 크면 관리가 어려움)
