@@ -96,3 +96,46 @@
     testary = [55, 88, 77, 33]
     minpos = findminidx(testary)
     print('최솟값 -->', testary[minpos]) #실행결과 : 최솟값 --> 33
+
+## 선택정렬 개선된 최솟값을 찾는 코드
+
+    def selectionsort(ary)
+        n = len(ary)
+        for i in range(0,n-1) :
+            minidx = i
+            for k in range(i+1,n) :
+                if (ary[minidx] > ary[k]) :
+                    minidx = k
+            tmp = ary[i]
+            ary[i] = ary[minidx]
+            ary[minidx] = tmp
+
+        return ary
+
+    dataary = [188, 162, 168, 120, 50, 150, 177, 105]  ##전역 변수 선언 부분##
+
+    print('정렬 전 --->', dataary)
+    dataary = selectionsort(dataary)
+    print('정렬 후 --->', dataary)
+
+    
+## 선택정렬 배열을 정렬하는 코드                
+
+   def findsmallest(arr):
+       smallest = arr[0]
+       smallest_index = 0
+       for i in range(1, len(arr)):
+           if arr[i] < smallest:
+               smallest = arr[i]
+               smallest_index = i
+       retrun  smallest_index
+   def selectionsort(arr):
+       newarr = []
+       for i in range(len(arr)):
+           smallest = findsmallest(arr)
+           newarr.append(arr.pop(smallest))
+        return newarr
+
+   print selectionsort([5,3,6,2,10])
+   
+            
