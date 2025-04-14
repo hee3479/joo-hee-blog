@@ -129,6 +129,7 @@
                smallest = arr[i]
                smallest_index = i
         retrun  smallest_index
+        
     def selectionsort(arr):
         newarr = []
         for i in range(len(arr)):
